@@ -8,4 +8,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Cleaning room.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/SnackFRIDGE.unity
+    guid: cc4f6ec8aad8fcf4f9a9dfcf1d6a6e1b
+  - enabled: 1
+    path: Assets/Scenes/SnackCOUNTER.unity
+    guid: 1c640ab054701e341bfcd829ae983d8d
   m_configObjects: {}
