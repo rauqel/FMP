@@ -25,9 +25,9 @@ public class FridgeChecklist : MonoBehaviour
         {
             nextSceneCount += Time.deltaTime;
             Debug.Log(nextSceneCount);
-            if (nextSceneCount >= 2.0f && nextSceneCount <= 3.0f)
+            if (nextSceneCount >= 1.0f && nextSceneCount <= 1.5f)
             {
-                SceneManager.LoadScene("SnackCOUNTER");
+                SceneManager.LoadScene("SnackCUPBOARD");
             }
         }
     }
