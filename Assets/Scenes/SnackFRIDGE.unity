@@ -586,6 +586,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 878666472}
+  - component: {fileID: 878666473}
   m_Layer: 0
   m_Name: Fridge objects
   m_TagString: Untagged
@@ -612,6 +613,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &878666473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 878666471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bec279a4d46cf7458036907a62e243f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mainText: {fileID: 1705844988}
+  breadCheck: {fileID: 1858556459}
+  butterCheck: {fileID: 2056035214}
 --- !u!1 &878824487
 GameObject:
   m_ObjectHideFlags: 0
@@ -1306,16 +1322,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1858556455}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bec279a4d46cf7458036907a62e243f, type: 3}
+  m_Script: {fileID: 11500000, guid: edbef574fff7ab2419e9a76c8246a0ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainText: {fileID: 1705844988}
-  noBread: {fileID: 1053629599}
-  noButter: {fileID: 1843838107}
-  breadCollect: {fileID: 325312647}
-  butterCollect: {fileID: 2033406717}
   breadObject: {fileID: 1858556455}
-  butterObject: {fileID: 2056035210}
+  noBread: {fileID: 1053629599}
+  breadCollect: {fileID: 325312647}
+  gotBread: 0
 --- !u!1 &1928067229
 GameObject:
   m_ObjectHideFlags: 0
@@ -1544,13 +1557,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2056035210}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8bec279a4d46cf7458036907a62e243f, type: 3}
+  m_Script: {fileID: 11500000, guid: 223b8302548d5ba468f721a9f341cc51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mainText: {fileID: 1705844988}
-  noBread: {fileID: 1053629599}
-  noButter: {fileID: 1843838107}
-  breadCollect: {fileID: 325312647}
-  butterCollect: {fileID: 2033406717}
-  breadObject: {fileID: 1858556455}
   butterObject: {fileID: 2056035210}
+  noButter: {fileID: 1843838107}
+  butterCollect: {fileID: 2033406717}
+  gotButter: 0
