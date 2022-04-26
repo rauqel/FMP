@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CleanLitter : MonoBehaviour
 {
+    public GameObject wrapperTwo;
+    public GameObject wrapperThree;
+
     Vector3 cleanWrapper;
     Vector3 cleanWrapper2;
     Vector3 cleanWrapper3;

@@ -339,7 +339,6 @@ GameObject:
   m_Component:
   - component: {fileID: 264359470}
   - component: {fileID: 264359469}
-  - component: {fileID: 264359468}
   - component: {fileID: 264359471}
   m_Layer: 0
   m_Name: Messy wrapper (2)
@@ -348,19 +347,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &264359468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 264359467}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05d3cc0c2fbdb0849affa1c4bd509088, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wrappersCleaned: 0
 --- !u!212 &264359469
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -529,7 +515,6 @@ GameObject:
   - component: {fileID: 430859412}
   - component: {fileID: 430859411}
   - component: {fileID: 430859410}
-  - component: {fileID: 430859413}
   m_Layer: 0
   m_Name: Messy Plushie 4
   m_TagString: plushOne
@@ -628,21 +613,6 @@ Transform:
   m_Father: {fileID: 473489289}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &430859413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 430859409}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a35e127fb91808d4d9cbacb6925a13fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allowPlushie: {fileID: 83839011}
-  plushCleaned: 0
-  text: {fileID: 1117110125}
 --- !u!1 &473489288
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,6 +1187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05d3cc0c2fbdb0849affa1c4bd509088, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  wrapperTwo: {fileID: 0}
+  wrapperThree: {fileID: 0}
   wrappersCleaned: 0
 --- !u!212 &1192318625
 SpriteRenderer:
@@ -1572,7 +1544,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1672692105}
   - component: {fileID: 1672692104}
-  - component: {fileID: 1672692103}
   - component: {fileID: 1672692106}
   m_Layer: 0
   m_Name: Messy Wrapper (3)
@@ -1581,19 +1552,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1672692103
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1672692102}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 05d3cc0c2fbdb0849affa1c4bd509088, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  wrappersCleaned: 0
 --- !u!212 &1672692104
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1696,7 +1654,6 @@ GameObject:
   - component: {fileID: 1699102100}
   - component: {fileID: 1699102099}
   - component: {fileID: 1699102098}
-  - component: {fileID: 1699102101}
   m_Layer: 0
   m_Name: Messy Plushie 2
   m_TagString: plushTwo
@@ -1795,21 +1752,6 @@ Transform:
   m_Father: {fileID: 473489289}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1699102101
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1699102097}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a35e127fb91808d4d9cbacb6925a13fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allowPlushie: {fileID: 83839011}
-  plushCleaned: 0
-  text: {fileID: 1117110125}
 --- !u!1 &1702615153
 GameObject:
   m_ObjectHideFlags: 0
@@ -1903,7 +1845,6 @@ GameObject:
   - component: {fileID: 1830642208}
   - component: {fileID: 1830642207}
   - component: {fileID: 1830642206}
-  - component: {fileID: 1830642209}
   m_Layer: 0
   m_Name: Messy Plushie 3
   m_TagString: plushFour
@@ -2002,21 +1943,6 @@ Transform:
   m_Father: {fileID: 473489289}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1830642209
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1830642205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a35e127fb91808d4d9cbacb6925a13fd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  allowPlushie: {fileID: 83839011}
-  plushCleaned: 0
-  text: {fileID: 1117110125}
 --- !u!1 &2072441609
 GameObject:
   m_ObjectHideFlags: 0

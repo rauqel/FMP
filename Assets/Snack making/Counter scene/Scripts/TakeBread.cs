@@ -16,13 +16,13 @@ public class TakeBread : MonoBehaviour
     {
         breadSlice.SetActive(false);
 
-        SliceToLife = GetComponent<Animator>();
+        SliceToLife = breadSlice.GetComponent<Animator>();
     }
 
     private void OnMouseDown()
     {
         breadSlice.SetActive(true);
-        SliceToLife.Play("BreadCollection");
+        SliceToLife.Play("BreadCollect");
     }
 
     // Update is called once per frame
