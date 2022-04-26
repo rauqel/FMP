@@ -16,7 +16,7 @@ public class TakeBread : MonoBehaviour
     {
         breadSlice.SetActive(false);
 
-        SliceToLife.GetComponent<Animator>();
+        SliceToLife = breadSlice.GetComponent<Animator>();
     }
 
     private void OnMouseDown()
