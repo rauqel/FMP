@@ -10,10 +10,11 @@ public class TakeSprinkles : MonoBehaviour
     public Sprite sprinkleInHand;
     public GameObject breadSprinkles;
 
-    bool pickedUp;
+    bool pickedUp = false;
     bool sprinklesOn;
 
     public TakeBread breadScript;
+    public TakeKnife knifeScript;
 
     private void Start()
     {
@@ -26,13 +27,13 @@ public class TakeSprinkles : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (breadScript.breadActive)
+            if (breadScript.breadActive && knifeScript.butteredKnife)
             {
                 if (!pickedUp)
                 {
                     Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
 
-                    //Debug.Log(targetObject.gameObject.name);
+                    Debug.Log(targetObject.gameObject.name);
 
                     if (targetObject == sprinkleCollider)
                     {
@@ -51,8 +52,10 @@ public class TakeSprinkles : MonoBehaviour
         }
         if (pickedUp)
         {
-            sprinkleJar.transform.position = mousePosition;
-
+            transform.position = mousePosition;
+        }
+        if (pickedUp)
+        {
             sprinkleJar.GetComponent<SpriteRenderer>().sprite = sprinkleInHand;
 
             if (Input.GetMouseButtonDown(0))
