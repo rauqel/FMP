@@ -133,9 +133,6 @@ GameObject:
   m_Component:
   - component: {fileID: 703777519}
   - component: {fileID: 703777518}
-  - component: {fileID: 703777520}
-  - component: {fileID: 703777521}
-  - component: {fileID: 703777522}
   m_Layer: 0
   m_Name: knife
   m_TagString: Untagged
@@ -202,74 +199,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 703777517}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.41, y: -1.45, z: 0}
+  m_LocalPosition: {x: -6.24, y: -1.34, z: 0}
   m_LocalScale: {x: 0.6651, y: 0.6651, z: 0.6651}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &703777520
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703777517}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -0.004540324, y: -0.086563826}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 10.5, y: 10.5}
-    newSize: {x: 10.5, y: 10.5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1.4754193, y: 10.015997}
-  m_EdgeRadius: 0
---- !u!114 &703777521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703777517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1482e9bd845682c43936425076b266e1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  knifeCollider: {fileID: 703777520}
-  knifeObject: {fileID: 703777517}
-  butteredKnife: {fileID: 21300000, guid: 3e702a8cf63a0264a988f81762df756f, type: 3}
---- !u!50 &703777522
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 703777517}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!1 &847518752
 GameObject:
   m_ObjectHideFlags: 0
@@ -362,10 +297,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1002950952}
   - component: {fileID: 1002950951}
-  - component: {fileID: 1002950953}
   m_Layer: 0
   m_Name: butter
-  m_TagString: Butter
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -435,32 +369,6 @@ Transform:
   m_Father: {fileID: 1057083028}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &1002950953
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1002950950}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 9, y: 5.2}
-    newSize: {x: 9, y: 5.2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 9, y: 5.2}
-  m_EdgeRadius: 0
 --- !u!1 &1057083027
 GameObject:
   m_ObjectHideFlags: 0
@@ -737,8 +645,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487576420}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.735389, y: 3.6740272, z: 409.98}
-  m_LocalScale: {x: 1.0882272, y: 1.0882272, z: 1.0882272}
+  m_LocalPosition: {x: -10.735389, y: 3.6740272, z: 407.5}
+  m_LocalScale: {x: 0.8534445, y: 0.8534445, z: 0.8534445}
   m_Children: []
   m_Father: {fileID: 1057083028}
   m_RootOrder: 3
