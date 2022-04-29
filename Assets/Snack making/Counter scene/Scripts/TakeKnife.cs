@@ -10,7 +10,12 @@ public class TakeKnife : MonoBehaviour
 
     public GameObject knifeObject;
     public Sprite butteredKnife;
+    public Sprite normalKnife;
+    bool knifeButtered = false;
 
+    public TakeBread breadSlice;
+    public Sprite butteredBread;
+    public GameObject breadObject;
     void Update()
     {
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
@@ -45,6 +50,13 @@ public class TakeKnife : MonoBehaviour
         if(collision.gameObject.tag == "Butter")
         {
             knifeObject.GetComponent<SpriteRenderer>().sprite = butteredKnife;
+            knifeButtered = true;
+        }
+
+        if(breadSlice.breadActive && collision.gameObject.tag == "Bread" && knifeButtered)
+        {
+            knifeObject.GetComponent<SpriteRenderer>().sprite = normalKnife;
+            breadObject.GetComponent<SpriteRenderer>().sprite = butteredBread;
         }
     }
 }
