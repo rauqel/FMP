@@ -5,30 +5,35 @@ using UnityEngine.SceneManagement;
 
 public class TakeSprinkles : MonoBehaviour
 {
-    public GameObject sprinkleJar;
+    bool pickedUp = false;
+    bool sprinklesOn = false;
     public Collider2D sprinkleCollider;
+
+    public GameObject sprinkleJar;
     public Sprite sprinkleInHand;
     public GameObject breadSprinkles;
 
-    bool pickedUp;
-    bool sprinklesOn;
-
     public TakeBread breadScript;
-
-    private void Start()
-    {
-        breadSprinkles.SetActive(false);
-    }
-
+    public TakeKnife knifeScript;
     void Update()
     {
-        Vector2 mousePosition = Camera.main.WorldToScreenPoint(Input.mousePosition);
+        if (sprinklesOn)
+        {
+            breadSprinkles.SetActive(true);
+        }
+        else
+        {
+            breadSprinkles.SetActive(false);
+        }
+
+        //
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         if (Input.GetMouseButtonDown(0))
         {
             if (breadScript.breadActive)
             {
-                if (!pickedUp)
+                if (pickedUp == false)
                 {
                     Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
 
@@ -49,27 +54,28 @@ public class TakeSprinkles : MonoBehaviour
                 pickedUp = false;
             }
         }
+
         if (pickedUp)
         {
-            sprinkleJar.transform.position = mousePosition;
+            transform.position = mousePosition;
+
 
             sprinkleJar.GetComponent<SpriteRenderer>().sprite = sprinkleInHand;
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
-
-                if(targetObject == breadScript.breadSlice)
-                {
-                    sprinklesOn = true;
-                }
-            }
         }
-
-        if (sprinklesOn)
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Bread")
         {
-            breadSprinkles.SetActive(true);
-            //SceneManager.LoadScene()
+            if (knifeScript.breadButtered)
+            {
+                sprinklesOn = true;
+            }
+            else
+            {
+                sprinklesOn = false;
+                //otherstuff to do with ERROR MESSAGES and such
+            }
         }
     }
 }

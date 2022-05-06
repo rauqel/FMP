@@ -12,6 +12,7 @@ public class TakeKnife : MonoBehaviour
     public Sprite butteredKnife;
     public Sprite normalKnife;
     bool knifeButtered = false;
+    public bool breadButtered = false;
 
     public TakeBread breadSlice;
     public Sprite butteredBread;
@@ -57,6 +58,7 @@ public class TakeKnife : MonoBehaviour
         {
             knifeObject.GetComponent<SpriteRenderer>().sprite = normalKnife;
             breadObject.GetComponent<SpriteRenderer>().sprite = butteredBread;
+            breadButtered = true;
         }
     }
 }
