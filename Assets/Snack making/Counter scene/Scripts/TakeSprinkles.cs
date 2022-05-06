@@ -5,39 +5,35 @@ using UnityEngine.SceneManagement;
 
 public class TakeSprinkles : MonoBehaviour
 {
-    bool pickedUp = false;
-    bool sprinklesOn = false;
-    public Collider2D sprinkleCollider;
-
     public GameObject sprinkleJar;
+    public Collider2D sprinkleCollider;
     public Sprite sprinkleInHand;
     public GameObject breadSprinkles;
 
+    bool pickedUp = false;
+    bool sprinklesOn;
+
     public TakeBread breadScript;
     public TakeKnife knifeScript;
+
+    private void Start()
+    {
+        breadSprinkles.SetActive(false);
+    }
+
     void Update()
     {
-        if (sprinklesOn)
-        {
-            breadSprinkles.SetActive(true);
-        }
-        else
-        {
-            breadSprinkles.SetActive(false);
-        }
-
-        //
-        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        Vector2 mousePosition = Camera.main.WorldToScreenPoint(Input.mousePosition);
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (breadScript.breadActive)
+            if (breadScript.breadActive && knifeScript.butteredKnife)
             {
-                if (pickedUp == false)
+                if (!pickedUp)
                 {
                     Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
 
-                    //Debug.Log(targetObject.gameObject.name);
+                    Debug.Log(targetObject.gameObject.name);
 
                     if (targetObject == sprinkleCollider)
                     {
@@ -54,28 +50,29 @@ public class TakeSprinkles : MonoBehaviour
                 pickedUp = false;
             }
         }
-
         if (pickedUp)
         {
             transform.position = mousePosition;
-
-
-            sprinkleJar.GetComponent<SpriteRenderer>().sprite = sprinkleInHand;
         }
-    }
-    void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Bread")
+        if (pickedUp)
         {
-            if (knifeScript.breadButtered)
+            sprinkleJar.GetComponent<SpriteRenderer>().sprite = sprinkleInHand;
+
+            if (Input.GetMouseButtonDown(0))
             {
-                sprinklesOn = true;
+                Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
+
+                if(targetObject == breadScript.breadSlice)
+                {
+                    sprinklesOn = true;
+                }
             }
-            else
-            {
-                sprinklesOn = false;
-                //otherstuff to do with ERROR MESSAGES and such
-            }
+        }
+
+        if (sprinklesOn)
+        {
+            breadSprinkles.SetActive(true);
+            //SceneManager.LoadScene()
         }
     }
 }

@@ -12,7 +12,7 @@ public class TakeKnife : MonoBehaviour
     public Sprite butteredKnife;
     public Sprite normalKnife;
     bool knifeButtered = false;
-    public bool breadButtered = false;
+    bool breadButtered = false;
 
     public TakeBread breadSlice;
     public Sprite butteredBread;
@@ -50,8 +50,12 @@ public class TakeKnife : MonoBehaviour
     {
         if(collision.gameObject.tag == "Butter")
         {
-            knifeObject.GetComponent<SpriteRenderer>().sprite = butteredKnife;
-            knifeButtered = true;
+            if (!breadButtered)
+            {
+                knifeObject.GetComponent<SpriteRenderer>().sprite = butteredKnife;
+                knifeButtered = true;
+            }
+            else { }
         }
 
         if(breadSlice.breadActive && collision.gameObject.tag == "Bread" && knifeButtered)
