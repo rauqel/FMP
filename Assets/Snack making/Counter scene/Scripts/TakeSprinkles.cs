@@ -7,8 +7,10 @@ public class TakeSprinkles : MonoBehaviour
 {
     public GameObject sprinkleJar;
     public Collider2D sprinkleCollider;
-    public Sprite sprinkleInHand;
+    public Sprite sprinklePour;
     public GameObject breadSprinkles;
+
+    int pourCount = 0;
 
     bool pickedUp = false;
     bool sprinklesOn;
@@ -16,24 +18,19 @@ public class TakeSprinkles : MonoBehaviour
     public TakeBread breadScript;
     public TakeKnife knifeScript;
 
-    private void Start()
-    {
-        breadSprinkles.SetActive(false);
-    }
-
     void Update()
     {
-        Vector2 mousePosition = Camera.main.WorldToScreenPoint(Input.mousePosition);
+        Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
 
         if (Input.GetMouseButtonDown(0))
         {
-            if (breadScript.breadActive && knifeScript.butteredKnife)
+            if (breadScript.breadActive)
             {
-                if (!pickedUp)
+                if (pickedUp == false)
                 {
                     Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
 
-                    Debug.Log(targetObject.gameObject.name);
+                    //Debug.Log(targetObject.gameObject.name);
 
                     if (targetObject == sprinkleCollider)
                     {
@@ -50,29 +47,34 @@ public class TakeSprinkles : MonoBehaviour
                 pickedUp = false;
             }
         }
+
         if (pickedUp)
         {
             transform.position = mousePosition;
         }
-        if (pickedUp)
+
+        //
+        if (pourCount == 0)
         {
-            sprinkleJar.GetComponent<SpriteRenderer>().sprite = sprinkleInHand;
-
-            if (Input.GetMouseButtonDown(0))
-            {
-                Collider2D targetObject = Physics2D.OverlapPoint(mousePosition);
-
-                if(targetObject == breadScript.breadSlice)
-                {
-                    sprinklesOn = true;
-                }
-            }
+            breadSprinkles.SetActive(false);
         }
-
-        if (sprinklesOn)
+        else
         {
             breadSprinkles.SetActive(true);
-            //SceneManager.LoadScene()
+
+            //*SceneManager.LoadScene("MainScene");
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Bread")
+        {
+            if (knifeScript.breadButtered)
+            {
+                sprinkleJar.GetComponent<SpriteRenderer>().sprite = sprinklePour;
+                pourCount += 1;
+            }
         }
     }
 }

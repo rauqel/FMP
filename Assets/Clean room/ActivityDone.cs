@@ -1,22 +1,22 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UIElements;
+using UnityEngine.SceneManagement;
 
-public class Activitydone : MonoBehaviour
+public class ActivityDone : MonoBehaviour
 {
-    CleanBed bed;
-    CleanClothes clothes;
-    CleanDesk desk;
-    CleanLitter litter;
-    CleanPlushies plush;
+    public CleanBed bed;
+    public CleanClothes clothes;
+    public CleanDesk desk;
+    public WrapperOne litter;
+    public PlushOne plush;
 
     // Update is called once per frame
     void Update()
     {
         if(bed.bedCleaned && clothes.clothesCleaned && desk.deskCleaned && litter.wrappersCleaned && plush.plushCleaned)
         {
-            //allow player to progress
+            //SceneManager.LoadScene("MainScene");
         }
     }
 }

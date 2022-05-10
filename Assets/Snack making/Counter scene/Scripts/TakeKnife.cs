@@ -12,7 +12,7 @@ public class TakeKnife : MonoBehaviour
     public Sprite butteredKnife;
     public Sprite normalKnife;
     bool knifeButtered = false;
-    bool breadButtered = false;
+    public bool breadButtered = false;
 
     public TakeBread breadSlice;
     public Sprite butteredBread;

@@ -148,7 +148,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210110701}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.285388, y: -1.5559735, z: 401.4962}
+  m_LocalPosition: {x: -4.285388, y: -1.5559735, z: 405}
   m_LocalScale: {x: 0.5085317, y: 0.5085317, z: 0.5085317}
   m_Children: []
   m_Father: {fileID: 1057083028}
@@ -332,6 +332,7 @@ MonoBehaviour:
   knifeObject: {fileID: 703777517}
   butteredKnife: {fileID: 21300000, guid: 3e702a8cf63a0264a988f81762df756f, type: 3}
   normalKnife: {fileID: 21300000, guid: 49f7e14b533d99949a84a9d7ab1caa67, type: 3}
+  breadButtered: 0
   breadSlice: {fileID: 1789947195}
   butteredBread: {fileID: 21300000, guid: 5cbd4dea58ae46f4f8b2213d28e06712, type: 3}
   breadObject: {fileID: 1487576420}
@@ -725,7 +726,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9bf022fda38f7a048a02347f69114cea, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 844d2481944b9b2449d3971f10b3bad9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -764,7 +765,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sprinkleJar: {fileID: 1350186237}
   sprinkleCollider: {fileID: 1350186241}
-  sprinkleInHand: {fileID: 21300000, guid: 844d2481944b9b2449d3971f10b3bad9, type: 3}
+  sprinklePour: {fileID: 21300000, guid: 9bf022fda38f7a048a02347f69114cea, type: 3}
   breadSprinkles: {fileID: 210110701}
   breadScript: {fileID: 1789947195}
   knifeScript: {fileID: 703777521}
@@ -778,14 +779,14 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.12, y: 6.55}
+    oldSize: {x: 5.72, y: 7.27}
     newSize: {x: 8.12, y: 6.55}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
