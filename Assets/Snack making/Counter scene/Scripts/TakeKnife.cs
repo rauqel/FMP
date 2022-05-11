@@ -8,15 +8,21 @@ public class TakeKnife : MonoBehaviour
     bool dragging = false;
     public Collider2D knifeCollider;
 
+    //game objects
     public GameObject knifeObject;
-    public Sprite butteredKnife;
-    public Sprite normalKnife;
+    public GameObject breadObject;
+
+    //bools
     bool knifeButtered = false;
     public bool breadButtered = false;
 
+    //script
     public TakeBread breadSlice;
+
+    //sprites
     public Sprite butteredBread;
-    public GameObject breadObject;
+    public Sprite butteredKnife;
+    public Sprite normalKnife;
     void Update()
     {
         Vector2 mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);

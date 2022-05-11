@@ -8,12 +8,11 @@ public class TakeSprinkles : MonoBehaviour
     public GameObject sprinkleJar;
     public Collider2D sprinkleCollider;
     public Sprite sprinklePour;
-    public GameObject breadSprinkles;
+    public Sprite breadSprinkles;
 
     int pourCount = 0;
 
     bool pickedUp = false;
-    bool sprinklesOn;
 
     public TakeBread breadScript;
     public TakeKnife knifeScript;
@@ -54,15 +53,10 @@ public class TakeSprinkles : MonoBehaviour
         }
 
         //
-        if (pourCount == 0)
+        if (pourCount != 0)
         {
-            breadSprinkles.SetActive(false);
-        }
-        else
-        {
-            breadSprinkles.SetActive(true);
-
-            //*SceneManager.LoadScene("MainScene");
+            breadScript.breadSlice.GetComponent<SpriteRenderer>().sprite = breadSprinkles;
+            //SceneManager.LoadScene("MainScene");
         }
     }
 

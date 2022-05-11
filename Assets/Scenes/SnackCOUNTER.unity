@@ -123,7 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &210110701
+--- !u!1 &421863356
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -131,36 +131,23 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 210110702}
-  - component: {fileID: 210110703}
+  - component: {fileID: 421863359}
+  - component: {fileID: 421863358}
+  - component: {fileID: 421863360}
   m_Layer: 0
-  m_Name: scattered sprinkles
-  m_TagString: Untagged
+  m_Name: bread slice
+  m_TagString: Bread
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &210110702
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210110701}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -4.285388, y: -1.5559735, z: 405}
-  m_LocalScale: {x: 0.5085317, y: 0.5085317, z: 0.5085317}
-  m_Children: []
-  m_Father: {fileID: 1057083028}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &210110703
+--- !u!212 &421863358
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 210110701}
+  m_GameObject: {fileID: 421863356}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -194,17 +181,57 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 580bc5f987b2dd544ae8d1e574454fd3, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f29510fd358a1e543bdefd830a2031f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 10.24, y: 10.24}
+  m_Size: {x: 4.4, y: 4.52}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!4 &421863359
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421863356}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -2.9853885, y: -0.24597296, z: 411.4962}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1057083028}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &421863360
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 421863356}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.03052646, y: -0.010175467}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 4.4, y: 4.52}
+    newSize: {x: 4.4, y: 4.52}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.992981, y: 4.275788}
+  m_EdgeRadius: 0
 --- !u!1 &703777517
 GameObject:
   m_ObjectHideFlags: 0
@@ -330,12 +357,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   knifeCollider: {fileID: 703777520}
   knifeObject: {fileID: 703777517}
-  butteredKnife: {fileID: 21300000, guid: 3e702a8cf63a0264a988f81762df756f, type: 3}
-  normalKnife: {fileID: 21300000, guid: 49f7e14b533d99949a84a9d7ab1caa67, type: 3}
+  breadObject: {fileID: 421863356}
   breadButtered: 0
   breadSlice: {fileID: 1789947195}
-  butteredBread: {fileID: 21300000, guid: 5cbd4dea58ae46f4f8b2213d28e06712, type: 3}
-  breadObject: {fileID: 1487576420}
+  butteredBread: {fileID: 21300000, guid: e4b3655fe0ca64245a90123c6b9fc173, type: 3}
+  butteredKnife: {fileID: 21300000, guid: 3e702a8cf63a0264a988f81762df756f, type: 3}
+  normalKnife: {fileID: 21300000, guid: 49f7e14b533d99949a84a9d7ab1caa67, type: 3}
 --- !u!50 &703777522
 Rigidbody2D:
   serializedVersion: 4
@@ -578,8 +605,7 @@ Transform:
   - {fileID: 1789947193}
   - {fileID: 1002950952}
   - {fileID: 1350186239}
-  - {fileID: 1487576422}
-  - {fileID: 210110702}
+  - {fileID: 421863359}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -766,7 +792,7 @@ MonoBehaviour:
   sprinkleJar: {fileID: 1350186237}
   sprinkleCollider: {fileID: 1350186241}
   sprinklePour: {fileID: 21300000, guid: 9bf022fda38f7a048a02347f69114cea, type: 3}
-  breadSprinkles: {fileID: 210110701}
+  breadSprinkles: {fileID: 21300000, guid: 531f93804b8c0964c9d40e5dc013fa2d, type: 3}
   breadScript: {fileID: 1789947195}
   knifeScript: {fileID: 703777521}
 --- !u!61 &1350186241
@@ -816,135 +842,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!1 &1487576420
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1487576422}
-  - component: {fileID: 1487576421}
-  - component: {fileID: 1487576423}
-  - component: {fileID: 1487576424}
-  m_Layer: 0
-  m_Name: sliceofbread
-  m_TagString: Bread
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!212 &1487576421
-SpriteRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487576420}
-  m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
-  m_MotionVectors: 1
-  m_LightProbeUsage: 1
-  m_ReflectionProbeUsage: 1
-  m_RayTracingMode: 0
-  m_RayTraceProcedural: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 0
-  m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
-  m_StaticBatchInfo:
-    firstSubMesh: 0
-    subMeshCount: 0
-  m_StaticBatchRoot: {fileID: 0}
-  m_ProbeAnchor: {fileID: 0}
-  m_LightProbeVolumeOverride: {fileID: 0}
-  m_ScaleInLightmap: 1
-  m_ReceiveGI: 1
-  m_PreserveUVs: 0
-  m_IgnoreNormalsForChartDetection: 0
-  m_ImportantGI: 0
-  m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 0
-  m_MinimumChartSize: 4
-  m_AutoUVMaxDistance: 0.5
-  m_AutoUVMaxAngle: 89
-  m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f75b495b6e211ef409c9fdbeee755d96, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 0
-  m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 8.2, y: 5}
-  m_AdaptiveModeThreshold: 0.5
-  m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
-  m_SpriteSortPoint: 0
---- !u!4 &1487576422
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487576420}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -10.735389, y: 3.6740272, z: 407.5}
-  m_LocalScale: {x: 0.8534445, y: 0.8534445, z: 0.8534445}
-  m_Children: []
-  m_Father: {fileID: 1057083028}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &1487576423
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487576420}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 912116286b9d4434790c50231f80b4c3, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
---- !u!61 &1487576424
-BoxCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1487576420}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 8.2, y: 5}
-    newSize: {x: 8.2, y: 5}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 8.2, y: 5}
-  m_EdgeRadius: 0
 --- !u!1 &1789947191
 GameObject:
   m_ObjectHideFlags: 0
@@ -1067,9 +964,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 54baef3cf50b0b0469bba3433b5b65d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  loafCollider: {fileID: 1789947194}
+  sliceCollider: {fileID: 421863360}
   breadLoaf: {fileID: 1789947191}
-  breadSlice: {fileID: 1487576420}
-  SliceToLife: {fileID: 1487576423}
+  breadSlice: {fileID: 421863356}
   breadActive: 0
 --- !u!1 &2003744318
 GameObject:
