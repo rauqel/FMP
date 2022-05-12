@@ -5,8 +5,17 @@ using UnityEngine.UIElements;
 
 public class W1 : MonoBehaviour
 {
+    public bool pressed1;
     public void CleanWrapper1()
     {
-        Destroy(gameObject);
+        pressed1 = true;
+    }
+
+    private void Update()
+    {
+        if (pressed1)
+        {
+            Destroy(gameObject);
+        }
     }
 }
