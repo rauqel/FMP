@@ -5,16 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class ActivityDone : MonoBehaviour
 {
-    public CleanBed bed;
+    public BedClean bed;
     public CleanClothes clothes;
-    public CleanDesk desk;
+    public DeskClean desk;
     public LitterController litter;
-    public PlushOne plush;
+    public PlushController plush;
 
     // Update is called once per frame
     void Update()
     {
-        if(bed.bedCleaned && clothes.clothesCleaned && desk.deskCleaned && litter.litterCleaned && plush.plushCleaned)
+        if(bed.bedCleaned && clothes.clothesCleaned && desk.cleanedDesk && litter.litterCleaned && plush.plushCleaned)
         {
             //SceneManager.LoadScene("MainScene");
         }
