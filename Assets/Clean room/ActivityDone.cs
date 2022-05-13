@@ -8,13 +8,13 @@ public class ActivityDone : MonoBehaviour
     public CleanBed bed;
     public CleanClothes clothes;
     public CleanDesk desk;
-    public WrapperOne litter;
+    public LitterController litter;
     public PlushOne plush;
 
     // Update is called once per frame
     void Update()
     {
-        if(bed.bedCleaned && clothes.clothesCleaned && desk.deskCleaned && litter.wrappersCleaned && plush.plushCleaned)
+        if(bed.bedCleaned && clothes.clothesCleaned && desk.deskCleaned && litter.litterCleaned && plush.plushCleaned)
         {
             //SceneManager.LoadScene("MainScene");
         }
