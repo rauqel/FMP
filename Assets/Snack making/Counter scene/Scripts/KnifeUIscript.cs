@@ -6,10 +6,11 @@ using UnityEngine.EventSystems;
 
 public class KnifeUIscript : MonoBehaviour, IDragHandler
 {
-    public GameObject knifeObject;
-    public Collider2D knifeCollider;
+    public Sprite normalKnife;
+    public Sprite butteredKnife;
 
-    bool dragging;
+    public bool knifeButtered;
+    public bool knifeNormal = true;
 
     RectTransform rt;
 
@@ -25,9 +26,14 @@ public class KnifeUIscript : MonoBehaviour, IDragHandler
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name == ("Hey"))
+        if(collision.gameObject.name == ("Butter"))
         {
-            Debug.Log("working");
+            if (knifeNormal)
+            {
+                gameObject.GetComponent<Image>().sprite = butteredKnife;
+                knifeNormal = false;
+                knifeButtered = true;
+            }
         }
     }
 }

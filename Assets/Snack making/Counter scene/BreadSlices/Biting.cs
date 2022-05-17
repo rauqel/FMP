@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Biting : MonoBehaviour
 {
-    public TakeKnife butterScript;
-    public TakeSprinkles sprinkleScript;
+    public KnifeUIscript knifeScript;
+    //public SprinkleUIscript sprinkleScript;
 
     float plainBites;
     float butterBites;
