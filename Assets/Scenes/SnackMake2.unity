@@ -852,6 +852,7 @@ GameObject:
   - component: {fileID: 1812426823}
   - component: {fileID: 1812426820}
   - component: {fileID: 1812426824}
+  - component: {fileID: 1812426826}
   m_Layer: 5
   m_Name: Bread slice
   m_TagString: Untagged
@@ -976,8 +977,65 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knifeScript: {fileID: 2074515381}
+  sprinklesOn: 0
   butteredBread: {fileID: 21300000, guid: e4b3655fe0ca64245a90123c6b9fc173, type: 3}
   sprinkledBread: {fileID: 21300000, guid: 531f93804b8c0964c9d40e5dc013fa2d, type: 3}
+--- !u!114 &1812426826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1812426818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_PressedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 1}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1812426821}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1935041977}
+        m_TargetAssemblyTypeName: Biting, Assembly-CSharp
+        m_MethodName: BreadBites
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1821755357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1089,6 +1147,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1935041975}
   - component: {fileID: 1935041976}
+  - component: {fileID: 1935041977}
   m_Layer: 5
   m_Name: Bread
   m_TagString: Untagged
@@ -1130,6 +1189,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   breadSlice: {fileID: 1812426818}
+--- !u!114 &1935041977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1935041974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4893ae8132c6e71488785d59504c71f4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breadScript: {fileID: 1812426824}
+  bOne: {fileID: 21300000, guid: d809444594daf254b9825a6fab465a3a, type: 3}
+  bTwo: {fileID: 21300000, guid: d0e9bb16179aa534aabb45cce1abedc4, type: 3}
+  bThree: {fileID: 21300000, guid: 4d043ead863c85549b86942ff483c09f, type: 3}
+  bFour: {fileID: 21300000, guid: c67ebd8f38170734cb030067e9d05ef0, type: 3}
+  bFive: {fileID: 21300000, guid: c634ac08baa5f644b99e281a737d5aa4, type: 3}
+  bSix: {fileID: 21300000, guid: 54c4a51343ba18b46887e178abffc35d, type: 3}
+  bSeven: {fileID: 21300000, guid: 4de0a824043d499438716e4cc5fcacee, type: 3}
+  bEight: {fileID: 21300000, guid: 6ec8956efe2dd064b9012733c83c4e33, type: 3}
+  bNine: {fileID: 21300000, guid: 475bc6a217bb8644bbb4edea05dfc982, type: 3}
+  bTen: {fileID: 21300000, guid: 39b519ddfe8c5f74f91c9880d7dc84d4, type: 3}
+  bEleven: {fileID: 21300000, guid: 2071235c542243f47b7f1ceb8bf8b3f7, type: 3}
+  bTwelve: {fileID: 21300000, guid: 76f5b7436bb096747ad6bc1dd33d100a, type: 3}
+  bThirteen: {fileID: 21300000, guid: 4479519cab3816344b3f7fa0f8e2128c, type: 3}
+  bFourteen: {fileID: 21300000, guid: 7186b4de98fc5ce46a316c5ccab8c1c3, type: 3}
+  bFifteen: {fileID: 21300000, guid: 666e7667c163af549b96020f65011145, type: 3}
+  bSixteen: {fileID: 21300000, guid: 2718f961359c09a4cacd4ef478a9cc87, type: 3}
+  bSeventeen: {fileID: 21300000, guid: b5c2c4e2ab96925478fda96cfe31e062, type: 3}
+  bEighteen: {fileID: 21300000, guid: e4febb28bb705ec40bf2470e5a0904b6, type: 3}
+  bNineteen: {fileID: 21300000, guid: 5cdb80895e3c7364fab5340d702773e4, type: 3}
+  bTwenty: {fileID: 21300000, guid: 760c28e16c807d64e8772e83353097fb, type: 3}
+  bTwentyOne: {fileID: 21300000, guid: c549e6308a348454f8aac1117dbaa4c8, type: 3}
+  bTwentyTwo: {fileID: 21300000, guid: 5dbb86f8425828440a10bbe5729f930f, type: 3}
+  biteCounter: 0
 --- !u!1 &2074515379
 GameObject:
   m_ObjectHideFlags: 0

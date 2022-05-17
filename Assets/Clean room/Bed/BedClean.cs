@@ -11,5 +11,6 @@ public class BedClean : MonoBehaviour
     public void cleanBed()
     {
         gameObject.GetComponent<Image>().sprite = cleanVer;
+        bedCleaned = true;
     }
 }

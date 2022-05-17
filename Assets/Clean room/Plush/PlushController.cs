@@ -1,9 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlushController : MonoBehaviour
 {
+    public BedClean bedScript;
+    public Text errorMsg;
+
     bool oneDestroyed;
     public GameObject oneButton;
     public GameObject oneClean;
@@ -24,23 +28,55 @@ public class PlushController : MonoBehaviour
 
     public void DestroyOne()
     {
-        Destroy(oneButton);
-        oneDestroyed = true;
+        if (bedScript.bedCleaned)
+        {
+            Destroy(oneButton);
+            oneDestroyed = true;
+            errorMsg.enabled = false;
+        }
+        else
+        {
+            errorMsg.enabled = true;
+        }
     }
     public void DestroyTwo()
     {
-        Destroy(twoButton);
-        twoDestroyed = true;
+        if (bedScript.bedCleaned)
+        {
+            Destroy(twoButton);
+            twoDestroyed = true;
+            errorMsg.enabled = false;
+        }
+        else
+        {
+            errorMsg.enabled = true;
+        }
     }
     public void DestroyThree()
     {
-        Destroy(threeButton);
-        threeDestroyed = true;
+        if (bedScript.bedCleaned)
+        {
+            Destroy(threeButton);
+            threeDestroyed = true;
+            errorMsg.enabled = false;
+        }
+        else
+        {
+            errorMsg.enabled = true;
+        }
     }
     public void DestroyFour()
     {
-        Destroy(fourButton);
-        fourDestroyed = true;
+        if (bedScript.bedCleaned)
+        {
+            Destroy(fourButton);
+            fourDestroyed = true;
+            errorMsg.enabled = false;
+        }
+        else
+        {
+            errorMsg.enabled = true;
+        }
     }
 
     private void Start()
@@ -49,6 +85,7 @@ public class PlushController : MonoBehaviour
         twoClean.SetActive(false);
         threeClean.SetActive(false);
         fourClean.SetActive(false);
+        errorMsg.enabled = false;
     }
 
     void Update()

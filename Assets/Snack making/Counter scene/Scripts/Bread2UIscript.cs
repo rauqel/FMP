@@ -9,7 +9,7 @@ public class Bread2UIscript : MonoBehaviour
     public KnifeUIscript knifeScript;
 
     bool butterOn;
-    bool sprinlesOn;
+    public bool sprinklesOn;
 
     public Sprite butteredBread;
     public Sprite sprinkledBread;
@@ -32,6 +32,7 @@ public class Bread2UIscript : MonoBehaviour
             if (butterOn)
             {
                 gameObject.GetComponent<Image>().sprite = sprinkledBread;
+                sprinklesOn = true;
             }
         }
     }
