@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class CleanClothes : MonoBehaviour
 {
-    Vector2 cleanPosition;
-    public bool clothesCleaned = false;
-    void Start()
+    public GameObject newClothes;
+    public GameObject messyClothes;
+    public bool clothesCleaned;
+
+    private void Start()
     {
-        cleanPosition = new Vector2(-2.73f, 3.41f);
+        newClothes.SetActive(false);
     }
-    void OnMouseDown()
+    public void clothesClicked()
     {
-        gameObject.transform.position = cleanPosition;
+        Destroy(messyClothes);
+        newClothes.SetActive(true);
         clothesCleaned = true;
     }
 }
