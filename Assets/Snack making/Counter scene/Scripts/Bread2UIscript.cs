@@ -7,16 +7,22 @@ using UnityEngine.UI;
 public class Bread2UIscript : MonoBehaviour
 {
     public KnifeUIscript knifeScript;
+    public Text errorMsg;
 
-    bool butterOn;
+    public bool butterOn;
     public bool sprinklesOn;
 
     public Sprite butteredBread;
     public Sprite sprinkledBread;
 
+    private void Start()
+    {
+        errorMsg.enabled = false;
+    }
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.name == ("Knife"))
+        if (collision.gameObject.name == ("Knife"))
         {
             if (knifeScript.knifeButtered)
             {
@@ -25,6 +31,10 @@ public class Bread2UIscript : MonoBehaviour
                 knifeScript.knifeNormal = true;
                 knifeScript.knifeButtered = false;
                 butterOn = true;
+                if (errorMsg.enabled)
+                {
+                    errorMsg.enabled = false;
+                }
             }
         }
         if(collision.gameObject.name == ("Sprinkle jar"))
@@ -33,6 +43,10 @@ public class Bread2UIscript : MonoBehaviour
             {
                 gameObject.GetComponent<Image>().sprite = sprinkledBread;
                 sprinklesOn = true;
+            }
+            else
+            {
+                errorMsg.enabled = true;
             }
         }
     }

@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 public class Biting : MonoBehaviour
 {
     public Bread2UIscript breadScript;
+    public GameObject breadEmpty;
 
     public Sprite bOne;
     public Sprite bTwo;
@@ -133,7 +134,7 @@ public class Biting : MonoBehaviour
         }
         if (biteCounter == 23)
         {
-            Destroy(breadScript.gameObject);
+            Destroy(breadEmpty);
             //SceneManager.LoadScene("MainScene");
         }
     }

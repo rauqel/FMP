@@ -20,7 +20,7 @@ public class BreadUIscript : MonoBehaviour, IDragHandler
 
     public void loafClicked()
     {
-        dragging = true;
+            dragging = true;
     }
 
     public void Update()
