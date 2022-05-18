@@ -5,31 +5,64 @@ using UnityEngine.UI;
 
 public class BarCompletion : MonoBehaviour
 {
-    public Image completionBar;
+    Image completionBar;
 
-    float knifePU = 0.25f;
-    float butterOn = 0.25f;
-    float sprinklePU = 0.25f;
-    float sprinklesOn = 0.25f;
+    public Bread2UIscript bread2Check;
+    public BreadUIscript breadCheck;
+    public KnifeUIscript knifeCheck;
+    public SprinkleUIscript sprinkleCheck;
 
-    public Bread2UIscript breadCheck;
+    float progress = 0f;
+    float currentProgress1 = 0f;
+    float currentProgress2 = 0f;
+    bool progressAdded1;
+    bool counterAdded1;
+    int counter;
 
     void Start()
     {
-        completionBar.fillAmount = 0;  
+        completionBar = GetComponent<Image>();
     }
 
     void Update()
     {
-        if (breadCheck.butterOn)
+        if (breadCheck.breadSlice.activeSelf)
         {
-            if(completionBar.fillAmount < 0.5f)
+            if (!counterAdded1)
             {
-                completionBar.fillAmount += butterOn / 1 * Time.deltaTime;
+                counter += 1;
+                counterAdded1 = true;
             }
-            else
+        }
+        if (knifeCheck.knifeButtered)
+        {
+            counter += 1;
+        }
+        if (bread2Check.butterOn)
+        {
+            counter += 1;
+        }
+        if (bread2Check.sprinklesOn)
+        {
+            counter += 1;
+        }
+        Debug.Log(counter);
+        completionBar.fillAmount = Mathf.Lerp(0f, 1.0f, progress);
+
+        if (counter == 1)
+        {
+            if (progress < currentProgress1 + 0.25f)
             {
-                completionBar.fillAmount = 0.5f;
+                progress += Time.deltaTime / 3.5f;
+                //progressAdded1 = true;
+            }
+        }
+        if (knifeCheck.knifeButtered)
+        {
+            if (progress < currentProgress2 + 0.25f)
+            {
+                progress += Time.deltaTime / 3.5f;
+                //progressAdded2 = true;
             }
         }
     }

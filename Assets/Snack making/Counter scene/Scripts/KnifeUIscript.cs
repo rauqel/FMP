@@ -21,7 +21,7 @@ public class KnifeUIscript : MonoBehaviour, IDragHandler
 
     public void OnDrag(PointerEventData eventData)
     {
-        rt.position = Input.mousePosition; 
+        rt.position = Input.mousePosition;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

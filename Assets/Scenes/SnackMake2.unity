@@ -317,7 +317,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -85.396}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 809, y: 148}
+  m_AnchoredPosition: {x: -831, y: -323}
   m_SizeDelta: {x: 431.7719, y: 231.8299}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &130756063
@@ -530,7 +530,7 @@ MonoBehaviour:
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 0
-  m_FillAmount: 0.03
+  m_FillAmount: 0
   m_FillClockwise: 1
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
@@ -555,8 +555,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd79a917577f9a14fb2b036771874575, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  completionBar: {fileID: 263760181}
-  breadCheck: {fileID: 1812426824}
+  bread2Check: {fileID: 1812426824}
+  breadCheck: {fileID: 1935041976}
+  knifeCheck: {fileID: 2074515381}
+  sprinkleCheck: {fileID: 1307480025}
 --- !u!1 &359457866
 GameObject:
   m_ObjectHideFlags: 0
@@ -659,7 +661,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -749, y: -330}
+  m_AnchoredPosition: {x: 761, y: 338.91}
   m_SizeDelta: {x: 369.5298, y: 381.2487}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!61 &1307480022
