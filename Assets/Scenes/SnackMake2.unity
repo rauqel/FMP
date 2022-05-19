@@ -384,6 +384,59 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 130756061}
   m_CullTransparentMesh: 1
+--- !u!1 &194957219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 194957220}
+  - component: {fileID: 194957221}
+  m_Layer: 5
+  m_Name: Bar controller
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &194957220
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194957219}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1821755361}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &194957221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 194957219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dd79a917577f9a14fb2b036771874575, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  completionBar: {fileID: 263760181}
+  bread2Check: {fileID: 1812426824}
+  breadCheck: {fileID: 1935041976}
+  knifeCheck: {fileID: 2074515381}
+  sprinkleCheck: {fileID: 1307480025}
 --- !u!1 &214539271
 GameObject:
   m_ObjectHideFlags: 0
@@ -478,7 +531,6 @@ GameObject:
   - component: {fileID: 263760180}
   - component: {fileID: 263760182}
   - component: {fileID: 263760181}
-  - component: {fileID: 263760183}
   m_Layer: 5
   m_Name: Completion bar
   m_TagString: Untagged
@@ -498,7 +550,7 @@ RectTransform:
   m_LocalScale: {x: 11.733444, y: 0.45280644, z: 1}
   m_Children: []
   m_Father: {fileID: 1821755361}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -543,22 +595,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 263760179}
   m_CullTransparentMesh: 1
---- !u!114 &263760183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 263760179}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd79a917577f9a14fb2b036771874575, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bread2Check: {fileID: 1812426824}
-  breadCheck: {fileID: 1935041976}
-  knifeCheck: {fileID: 2074515381}
-  sprinkleCheck: {fileID: 1307480025}
 --- !u!1 &359457866
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,6 +1378,7 @@ RectTransform:
   - {fileID: 1407740758}
   - {fileID: 1311547553}
   - {fileID: 1748533237}
+  - {fileID: 194957220}
   - {fileID: 263760180}
   m_Father: {fileID: 0}
   m_RootOrder: 1
