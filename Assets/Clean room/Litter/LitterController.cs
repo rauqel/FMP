@@ -8,51 +8,15 @@ public class LitterController : MonoBehaviour
     public bool litterCleaned;
 
     public W1 w1;
-    bool oneDestroyed; 
-    public GameObject cleaned1;
-
     public W2 w2;
-    bool twoDestroyed;
-    public GameObject cleaned2;
-
     public W3 w3;
-    bool threeDestroyed;
-    public GameObject cleaned3;
+    public W4 w4;
+    public W5 w5;
 
-    private void Start()
-    {
-        cleaned1.SetActive(false);
-        cleaned2.SetActive(false);
-        cleaned3.SetActive(false);
-    }
     void Update()
     {
-        if (w1.pressed1)
-        {
-            oneDestroyed = true;
-            if (oneDestroyed) 
-            {
-                cleaned1.SetActive(true);
-            }
-        }
-        if (w2.pressed2)
-        {
-            twoDestroyed = true;
-            if (twoDestroyed)
-            {
-                cleaned2.SetActive(true);
-            }
-        }
-        if (w3.pressed3)
-        {
-            threeDestroyed = true;
-            if (threeDestroyed)
-            {
-                cleaned3.SetActive(true);
-            }
-        }
 
-        if(oneDestroyed && twoDestroyed && threeDestroyed)
+        if(w1.pressed1 && w2.pressed2 && w3.pressed3 && w4.pressed4 && w5.pressed5)
         {
             litterCleaned = true;
         }
