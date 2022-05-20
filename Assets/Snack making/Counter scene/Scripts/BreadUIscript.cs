@@ -12,6 +12,9 @@ public class BreadUIscript : MonoBehaviour, IDragHandler
     RectTransform rt;
     bool dragging;
 
+    public Sprite minusBread;
+    public GameObject breadLoaf;
+
     public void Start()
     {
         rt = breadSlice.GetComponent<RectTransform>();
@@ -21,6 +24,7 @@ public class BreadUIscript : MonoBehaviour, IDragHandler
     public void loafClicked()
     {
         dragging = true;
+        breadLoaf.GetComponent<Image>().sprite = minusBread;
     }
 
     public void Update()

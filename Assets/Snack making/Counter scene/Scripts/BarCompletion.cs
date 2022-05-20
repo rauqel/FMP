@@ -66,7 +66,6 @@ public class BarCompletion : MonoBehaviour
                 counterAdding4 = false;
             }
         }
-        Debug.Log(counter);
         //
         //
         //

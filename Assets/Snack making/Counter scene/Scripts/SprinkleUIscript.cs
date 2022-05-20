@@ -7,6 +7,7 @@ using UnityEngine.EventSystems;
 public class SprinkleUIscript : MonoBehaviour, IDragHandler
 {
     RectTransform rt;
+    bool pickingUp;
 
     public void Start()
     {

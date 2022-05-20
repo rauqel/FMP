@@ -12,12 +12,15 @@ public class Bread2UIscript : MonoBehaviour
     public bool butterOn;
     public bool sprinklesOn;
 
-    public Sprite butteredBread;
-    public Sprite sprinkledBread;
+    public GameObject butteredBread;
+    public GameObject sprinkledBread;
 
     private void Start()
     {
         errorMsg.enabled = false;
+
+        butteredBread.SetActive(false);
+        sprinkledBread.SetActive(false);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -26,7 +29,7 @@ public class Bread2UIscript : MonoBehaviour
         {
             if (knifeScript.knifeButtered)
             {
-                gameObject.GetComponent<Image>().sprite = butteredBread;
+                butteredBread.SetActive(true);
                 knifeScript.gameObject.GetComponent<Image>().sprite = knifeScript.normalKnife;
                 knifeScript.knifeNormal = true;
                 knifeScript.knifeButtered = false;
@@ -41,7 +44,7 @@ public class Bread2UIscript : MonoBehaviour
         {
             if (butterOn)
             {
-                gameObject.GetComponent<Image>().sprite = sprinkledBread;
+                sprinkledBread.SetActive(true);
                 sprinklesOn = true;
             }
             else

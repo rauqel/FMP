@@ -19,6 +19,8 @@ public class BookController : MonoBehaviour
     bool isBlue;
     bool isRed;
 
+    public bool booksCleaned;
+
 
     public void Start()
     {
@@ -67,5 +69,9 @@ public class BookController : MonoBehaviour
             }
         }
 
+        if (blueCheck.blueCleaned && redCheck.redCleaned)
+        {
+            booksCleaned = true;
+        }
     }
 }
